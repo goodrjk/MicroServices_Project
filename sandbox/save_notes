@@ -1,0 +1,71 @@
+Python 3.7.3
+
+https://phoenixnap.com/kb/how-to-install-python-3-ubuntu
+
+python --version
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.7.3
+
+
+mkdir ~/src
+wget http://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
+tar -zxvf Python-3.7.3.tgz
+cd Python-3.7.3
+mkdir ~/.localpython
+./configure --prefix=$HOME/.localpython
+make
+make install
+
+sudo apt update
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+cd /tmp
+wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
+tar -xf Python-3.7.3.tgz
+cd python-3.7.3
+./configure
+sudo make altinstall
+
+MiniKube
+
+https://www.radishlogic.com/kubernetes/running-minikube-in-aws-ec2-ubuntu/
+https://www.bogotobogo.com/DevOps/Docker/Docker-Kubernetes-Minikube-install-on-AWS-EC2.php
+
+# Adjust arch
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version --client
+
+sudo apt-get update -y &&  sudo apt-get install -y docker.io
+sudo docker version
+service docker.io status
+service docker.io start
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+&& chmod +x minikube \
+&& sudo mv minikube /usr/local/bin/
+minikube version
+
+minikube start --driver=docker
+
+Git
+
+sudo apt install git-all
+
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Docker
+
+https://docs.docker.com/desktop/install/linux-install/
+https://docs.docker.com/desktop/install/ubuntu/
+
+
+hadolint
+
+Adjust arch as needed
+wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v2.10.0/hadolint-Linux-x86_64
+chmod +x /bin/hadolint
+
+
