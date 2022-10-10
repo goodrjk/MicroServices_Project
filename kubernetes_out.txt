@@ -1,0 +1,52 @@
+
+
+
+Output from Prediction Window Running with Kubernetes (Two Predictions)
+=======================================================================
+
+(.devops) ubuntu@ip-172-31-27-50:~/Part_4/MicroServices_Project$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+(.devops) ubuntu@ip-172-31-27-50:~/Part_4/MicroServices_Project$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+(.devops) ubuntu@ip-172-31-27-50:~/Part_4/MicroServices_Project$ 
+
+
+
+Output from Kubernetes Terminal Window (Two Predictions)
+========================================================
+
+(.devops) ubuntu@ip-172-31-27-50:~/Part_4/MicroServices_Project$ ./run_kubernetes.sh 
+deployment.apps/kb4 created
+NAMESPACE     NAME                               READY   STATUS              RESTARTS       AGE
+default       kb4-78df57fb47-kdz7z               0/1     ContainerCreating   0              1s
+kube-system   coredns-565d847f94-2njcq           1/1     Running             2 (145m ago)   34h
+kube-system   etcd-minikube                      1/1     Running             2 (145m ago)   34h
+kube-system   kube-apiserver-minikube            1/1     Running             2 (145m ago)   34h
+kube-system   kube-controller-manager-minikube   1/1     Running             2 (145m ago)   34h
+kube-system   kube-proxy-zbgfp                   1/1     Running             2 (145m ago)   34h
+kube-system   kube-scheduler-minikube            1/1     Running             2 (145m ago)   34h
+kube-system   storage-provisioner                1/1     Running             5 (43s ago)    34h
+service/kb4-service exposed
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+
+
+Kubernetes Pod Status
+=====================
+
+(.devops) ubuntu@ip-172-31-27-50:~/Part_4/MicroServices_Project$ kubectl get pod
+NAME                   READY   STATUS    RESTARTS   AGE
+kb4-78df57fb47-kdz7z   1/1     Running   0          33m
+(.devops) ubuntu@ip-172-31-27-50:~/Part_4/MicroServices_Project$ 

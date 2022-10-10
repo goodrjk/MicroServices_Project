@@ -5,13 +5,15 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath=goodrjk/gjohn_local
+dockerpath=goodrjk/udacity_4:firstimage
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker tag dd441368f48a $dockerpath
 
 # Step 3:
 # Push image to a docker repository
 docker login
 docker push $dockerpath
+#docker push goodrjk/udacity_4:tagname
