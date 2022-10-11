@@ -9,22 +9,26 @@ Using a pre-trained, `sklearn` model that has been trained to predict housing pr
 This requires building and testing the environment, defining and building the Docker image, uploading the new image to Docker, configuring Kubernetes and deploying the container to the cluster. 
 
 Github 		https://github.com/goodrjk/MicroServices_Project
+
 CircleCI 	https://app.circleci.com/pipelines/github/goodrjk/MicroServices_Project?filter=all
+
 DockerHub	https://hub.docker.com/repository/docker/goodrjk/udacity_4
 
 ### Required files for submission:
 
-README.md		This file
-Dockerfile		Configuration file to build and test Docker image 
-Makefile		Configuration file to install and lint 
-app.py			Boston Real Estate Prediction Application
-make_prediction.sh	Bash shell script to call app with test data
-run_docker.sh		Script to build docker container and launch app
-upload_docker.sh	Script to upload Docker image to goodrjk/udacity_4:firstimage
-run_kubernetes.sh	Script to run 
-docker_out.txt		Output from application window and prediction window running local docker
-kubernetes_out.txt	Output from application window and prediction window running with Kubernetes
-.circleci/config.yml	Configuration file for CircleCI to test repo
+|  File                 |    Purpose                                                                   |
+| ------------------    | --------------------------------------------------------------------------   |
+| README.me             | This file                                                                    |
+| Dockerfile            | Configuration file to build and test Docker image                            |
+| Makefile              | Configuration file to install and lint                                       | 
+| app.py                | Boston Real Estate Prediction Application                                    |
+| make_prediction.sh    | Bash shell script to call app with test data                                 |
+| run_docker.sh         | Script to build docker container and launch app                              |
+| upload_docker.sh      | Script to upload Docker image to goodrjk/udacity_4:firstimage                |
+| run_kubernetes.sh     | Script to run                                                                |
+| docker_out.txt        | Output from application window and prediction window running local docker    |
+| kubernetes_out.txt    | Output from application window and prediction window running with Kubernetes |
+| .circleci/config.yml  | Configuration file for CircleCI to test repo                                 |
 
 ### Script Execution
 
